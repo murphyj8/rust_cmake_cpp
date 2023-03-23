@@ -1,5 +1,4 @@
 
-// use libb::c_char to return a string
 use libc::c_char;
 use std::ffi::{CString,CStr};
 
@@ -9,13 +8,6 @@ extern "C" {
     fn Hash256_To_StdOut(message: *const c_char) -> bool;
     fn Hash256(message: *const c_char) -> *const c_char; 
 }
-/*
-pub fn safe_fun() -> Result<String, Utf8Error> {
-    let char_ptr = unsafe { unsafe_fun() };
-    let c_str = unsafe { CStr::from_ptr(char_ptr) };
-    c_str.to_str().map(|s| s.to_owned())
-}
-*/
 
 fn main() {
     println!("Hello, world!");
